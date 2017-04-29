@@ -5,35 +5,37 @@
       http-equiv="content-type">
       <title>Audio &amp; Video</title>
   </head>
-    <body>
+    <body bgcolor=aqua>
       
-      <h1>Example of Audio-Video-Canvas Code</h1><br>
+      <h1>Example of Audio-Video-Canvas Code</h1>
+      <br>
 
       <!-- Call Audio Canvas from Script Section -->
-      <canvas id="myAudio" width="250" height="75" style="border:2px solid #d3d3d3;"></canvas>
+      <canvas id="myAudio" width="225" height="75" style="border:2px solid #d3d3d3;"></canvas>
+      <br>
       
       <audio controls>
         <source src="sample.mp3" type="audio/mpeg">
       </audio>
       
-      <h3>Example of a Video File</h3><br>
+      <!-- Call Video Canvas from Script Section -->
+      <canvas id="myVideo" width="225" height="75" style="border:2px solid #d3d3d3;"></canvas>
+      <br>
+
       <video width="320" height="240" controls>
        <source src="sample.mp4" type="video/mp4">
       </video>
-
-      <canvas id="myCircle" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
-      
+   
   <script>
     var a = document.getElementById("myAudio");
     var atx = a.getContext("2d");
     atx.font = "30px Arial";
     atx.strokeText("Audio Example",10,50);
  
-    var c = document.getElementById("myCircle");
-    var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(95,50,40,0,2*Math.PI);
-    ctx.strokeText("Video Example",10,50);      
+    var v = document.getElementById("myVideo");
+    var vtx = v.getContext("2d");
+    vtx.font = "30px Arial";
+    vtx.strokeText("Video Example",10,50);      
   </script>   
       
   </body>
