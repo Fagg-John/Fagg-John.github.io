@@ -12,23 +12,13 @@
       
       <h3>For Loop Example:  Count to 10</h3>
       <br>
-<span id = "count" style="font-weight: bold">1</span>
 
-<script type = "text/javascript">
-var num = 1;
-function countToTen() {
-if (num > 10) {
-window.clearTimeout ("tim");
-}
-else {
-document.getElementById("count").innerHTML = num;
-num ++;
-var tim = window.setTimeout("countToTen()", 1000);  // increase count by 1 per second
-}
-}
+<Script Language="JavaScript">
+  var Number;
 
-countToTen();
-</script>  
+  for(Number = 1; Number <= 10; Number++)
+    document.write("Number " + Number + "<br>");
+</Script>
       
   </body>
 </html>
