@@ -14,15 +14,25 @@
       <br>
 
 <Script Language="JavaScript">
-  // Create Variable
-  var Number;
+  // Create Variable for FOR Loop
+  var forNumber;
 
   document.write("FOR LOOP EXAMPLE:" + "<br>")
    
   //For Loop that increments by 1
-  for(Number = 1; Number <= 10; Number++)
-    document.write("Counting: " + Number + "<br>");
-</Script>
+  for(forNumber = 1; forNumber <= 10; forNumber++)
+    document.write("Counting: " + forNumber + "<br>");
+
+  // Create Variable for DO Loop
+  var doNumber = 1;
+  
+  document.write("DO/WHILE LOOP EXAMPLE:" + "<br>")
+  
+  do {
+    document.write("Counting: " + doNumber + "<br>");
+    doNumber++;
+  }while(doNumber <= 10)
+</Script> 
       
   </body>
 </html>
