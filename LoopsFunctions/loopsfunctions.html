@@ -9,17 +9,20 @@
       
       <h1>Loops, Functions, Variables and Arrays Code</h1>
       <br>
+      
+      <h3>For Loop Example:  Count to 10</h3>
+      <br>
+      
 
   <script>
-    var a = document.getElementById("myAudio");
-    var atx = a.getContext("2d");
-    atx.font = "30px Arial";
-    atx.strokeText("Audio Example",10,50);
- 
-    var v = document.getElementById("myVideo");
-    var vtx = v.getContext("2d");
-    vtx.font = "30px Arial";
-    vtx.fillText("Video Example",10,50);      
+    function countToTen()
+      {
+        for(var i = 1; i <= 10; i++)
+          {
+            console.log(i);
+          }
+      }
+    countToTen();  
   </script>   
       
   </body>
