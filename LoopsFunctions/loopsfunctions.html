@@ -12,19 +12,28 @@
       
       <h3>For Loop Example:  Count to 10</h3>
       <br>
-      <div>The number is:<span id="count"></span></div>
+      <div>Counting: <span id="count"></span></div>
+      <!-- <span id = "count" style="font-weight: bold">1</span> -->
 
-  <script>
-    function countToTen()
+<script type = "text/javascript">
+  // Set Count Variable to 1
+  var count = 1;
+
+  // Create Function
+  function countToTen()
+    {
+      if (number > 10)
       {
-        for(var count = 1; count <= 10; count++)
-          {
-            document.getElementById('count').innerHTML = count;
-            <!-- console.log(count); -->
-          }
+        window.clearTimeout ("time");
       }
-    countToTen();  
-  </script>   
+      else {
+        document.getElementById("count").innerHTML = number;
+        number ++;
+      var time = window.setTimeout("countToTen()", 1000);  // increase count by 1 per second
+      }
+    }
+  countToTen();
+</script>   
       
   </body>
 </html>
