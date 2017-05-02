@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1"
+      http-equiv="content-type">
+      <title>Objects:  Functions, Properties and Methods</title>
+  </head>
+    <body bgcolor=aqua>
+      
+      <h1>Objects:  Functions, Properties and Methods</h1>
+      <br>
+      <p id="emp1"></p>
+      <br>
 
+<Script Language="JavaScript">
+  function person(firstName,lastName,age,eyeColor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.eyeColor = eyeColor;
+    }
+}
+var myEmployee1 = new person("Jeff","Haddon",52,"Brown");
+document.getElementById("emp1").innerHTML =
+"Name: " + person.firstName + " " + person.lastName;
+</Script> 
+      
+  </body>
+</html>
