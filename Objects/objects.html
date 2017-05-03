@@ -15,6 +15,7 @@
       <br>
 
 <Script Language="JavaScript">
+  // Object Function
   function person(firstName,lastName,age,hairColor)
     {
     this.firstName = firstName;
@@ -35,6 +36,11 @@ var myEmployee3 = new person("Gavin","Rackham",33,"Black");
 document.getElementById("emp3").innerHTML = "Name: " + myEmployee3.firstName + " " + myEmployee3.lastName + "<br />" 
                                           + "Age: " + myEmployee3.age + "<br />" + "Hair Color: " + myEmployee3.hairColor;  
 
+
+// Another way to setup objects with properties
+var person = {firstName:"John", lastName:"Fagg", age:48, hairColor:"blond"};
+document.getElementById("emp4").innerHTML = "Name: " + person.firstName + " " + person.lastName + "<br />" 
+                                          + "Age: " + person.age + "<br />" + "Hair Color: " + person.hairColor;      
 </Script> 
       
   </body>
