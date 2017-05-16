@@ -26,11 +26,11 @@ border: 1px solid black;
 
 #myCOUGARS:hover {
     background-color: navy;
-    width: 400px;
+    width: 700px;
     height: 200px;
     text-align: center;
     vertical-align: middle;
-    padding: 50px;
+    padding: 100px;
     border-radius: 50px;
 }
 
