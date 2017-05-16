@@ -4,6 +4,7 @@
     width: 270px;
     height: 200px;
     text-align: center;
+    vertical-align: middle;
     overflow: auto;
 }
 
@@ -28,7 +29,8 @@ border: 1px solid black;
     width: 400px;
     height: 200px;
     text-align: center;
-    padding: 100px;
+    vertical-align: middle;
+    padding: 50px;
     border-radius: 50px;
 }
 
