@@ -27,6 +27,7 @@ border: 1px solid black;
     background-color: navy;
     width: 400px;
     height: 200px;
+    text-align: center;
     padding: 100px;
     border-radius: 50px;
 }
