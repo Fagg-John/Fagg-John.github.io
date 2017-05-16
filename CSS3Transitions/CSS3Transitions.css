@@ -3,6 +3,7 @@
     background-color: brown;
     width: 270px;
     height: 200px;
+    text-align: center;
     overflow: auto;
 }
 
