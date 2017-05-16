@@ -1,4 +1,4 @@
-#myDIV {
+#myCOUGARS {
     border: 1px solid black;
     background-color: lightblue;
     width: 270px;
@@ -6,7 +6,7 @@
     overflow: auto;
 }
 
-#myDIV:hover {
+#myCOUGARS:hover {
     background-color: coral;
     width: 570px;
     height: 500px;
