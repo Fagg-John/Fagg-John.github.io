@@ -4,6 +4,8 @@
     width: 160px;
     height: 80px;
     border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
     overflow: auto;
 }
 
@@ -11,6 +13,8 @@
     background-color: navy;
     width: 160px;
     height: 80px;
+    text-align: center;
+    vertical-align: middle;
     /* padding: 100px; */
     border-radius: 50px;
 }
