@@ -1,6 +1,7 @@
 #myCOUGARS {
     border: 1px solid black;
     background-color: brown;
+    background: url("cougar.png" );
     width: 270px;
     height: 200px;
     overflow: auto;
@@ -24,6 +25,7 @@ border: 1px solid black;
 
 #myCOUGARS:hover {
     background-color: navy;
+    background: url("cougar.png" )
     width: 700px;
     height: 200px;
     /* padding: 100px; */
