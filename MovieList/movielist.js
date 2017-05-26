@@ -98,7 +98,7 @@ function GetViaAJAX()
     {
         HR = new XMLHttpRequest();
         HR.onreadystatechange = GotData;
-        HR.open("GET", "movieslist.JSON");
+        HR.open("GET", "movielist.JSON");
         HR.send();
     }
 } //GetViaAJAX
