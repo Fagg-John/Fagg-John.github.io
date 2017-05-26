@@ -1,5 +1,6 @@
 var movies = [];
 retrieveItem();
+var HR;
 			
 function retrieveItem()
 {
@@ -107,7 +108,7 @@ function GotData(data)
 {
     if (HR.readyState === XMLHttpRequest.DONE)
     {
-    Movies = JSON.parse(data.target.response);
+    movies = JSON.parse(data.target.response);
     DrawTable();
     }
 } //GotData
@@ -119,7 +120,7 @@ function DrawTable()
         for (var i = 3, len = Movies.Movie.length; i < len; i++)
         {
             var oRow = new Object();
-            oRow = JSON.parse(Movies.Movie[i]);
+            oRow = JSON.parse(movies.Movie[i]);
             var table = document.getElementById("data_table");
             var table_len = (table.rows.length) - 1;
             var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + oRow.Title + "</td><td id='genre_row" + table_len + "'>" + oRow.Genre + "</td><td id='submittedBy_row" + table_len + "'>" + oRow.Submitter + "</td><td><input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
