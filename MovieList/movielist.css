@@ -1,35 +1,66 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Movie List</title>
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <link rel="stylesheet" type="text/css" href="movielist.css">
-    <script type="text/javascript" src="movielist.js"></script>
-</head>
+tr:hover{background-color:#f5f5f5}
 
-<body>
-    <div id="movies" class="automargin">
-        <input type="button" class="button" value="Retrieve AJAX/JSON" onclick="GetViaAJAX();">
-        <input type="button" class="button" value="Clear Local Storage" onclick="ClearLocalStorage();">
-        <br>
-        <br>
-        
-    <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
-        <tr>
-            <th>Movie Title</th>
-            <th>Genre</th>
-            <th>Submitted By</th>
-            <th>Options</th>
-        </tr>
-        <tr>
-        <tr id="row1"><td align="center" id="movieTitle_row1">Casa Blanca</td><td id="genre_row1">Romance</td><td id="submittedBy_row1">Brother James</td><td></td></tr>
-        <tr id="row2"><td id="movieTitle_row2">Whats Up, Doc</td><td id="genre_row2">Comedy</td><td id="submittedBy_row2">Brother James</td><td></td></tr>
-            <td><input type="text" id="new_movieTitle"></td>
-            <td><input type="text" id="new_genre"></td>
-            <td><input type="text" id="new_submittedBy"></td>
-            <td><input type="button" class="smallbutton" onclick="add_row();" value="Add Row"></td>
-        </tr>
-    </table>
-    </div>
-</body>
-</html>
+.invalid input
+{
+    border-color:red;
+}
+
+.invalid::after
+{
+    content:"!";
+    font-weight:bolder;
+    color:red;
+}
+
+.button
+{
+    padding: 5px 15px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: mediumblue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: dodgerblue}
+
+.button:active
+{
+    background-color: mediumblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.smallbutton
+{
+    padding: 2px 5px;
+    font-size: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: mediumblue;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px #999;
+}
+
+.smallbutton:hover {background-color: dodgerblue}
+
+.smallbutton:active
+{
+    background-color: mediumblue;
+    box-shadow: 0 9px #666;
+    transform: translateY(2px);
+}
+   
+.automargin
+{
+    position:absolute;
+    top:5%;
+    left:25%;  
+}
