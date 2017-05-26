@@ -115,12 +115,12 @@ function GotData(data)
 
 function DrawTable()
 {
-    if(Movies.Movie.length>2)
+    if(items.movies.length>2)
     {
-        for (var i = 3, len = Movies.Movie.length; i < len; i++)
+        for (var i = 3, len = items.movies.length; i < len; i++)
         {
             var oRow = new Object();
-            oRow = JSON.parse(movies.Movie[i]);
+            oRow = JSON.parse(items.movie[i]);
             var table = document.getElementById("data_table");
             var table_len = (table.rows.length) - 1;
             var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + oRow.Title + "</td><td id='genre_row" + table_len + "'>" + oRow.Genre + "</td><td id='submittedBy_row" + table_len + "'>" + oRow.Submitter + "</td><td><input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
