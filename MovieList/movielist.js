@@ -4,7 +4,7 @@ var movies = [];
   function retrieveItem() {
     if (localStorage.moviesList) {
       items = JSON.parse(localStorage.getItem('moviesList'));
-      AddRows(items);
+      addRows(items);
     }
   }
 
@@ -15,11 +15,11 @@ var movies = [];
       var table_len = (table.rows.length) - 1;
       var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + item.Product + "</td><td id='genre_row" + table_len + "'>" + item.Genre + "</td><td id='submittedBy_row" + table_len + "'>" + item.Submitted + "</td><td><input type='button' value='Delete' class='smallbutton' onclick='delete_row(" + table_len + ")'></td></tr>";
     }
-  } //AddRows
+  } //addRows
 
   function delete_row(no) {
     document.getElementById("row" + no + "").outerHTML = "";
-  }
+  } //delet_row
 
   function add_row() {
     var new_movieTitle = document.getElementById("new_movieTitle").value;
@@ -43,7 +43,7 @@ var movies = [];
           var itemnew = { Product: item1.Product, Genre: item1.Genre, Submitted: item1.Submitted };
           movies.push(itemnew);
         }
-      }
+      }//add row
 
       movies.push(item);
       saveMoviewList();
@@ -55,7 +55,7 @@ var movies = [];
 
   function saveMoviewList() {
     localStorage.moviesList = JSON.stringify(movies);
-  }
+  }//saveMovieList
 
   function ClearLocalStorage() {
     localStorage.removeItem("moviesList");
@@ -79,7 +79,7 @@ var movies = [];
       return false;
     else
       return true;
-  }
+  }//validate
 
   function GetViaAJAX() {
     if (window.XMLHttpRequest) {
