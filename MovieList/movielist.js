@@ -17,7 +17,7 @@ function AddRows(items)
       var item = items[i];
       var table = document.getElementById("data_table");
       var table_len = (table.rows.length) - 1;
-      var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + item.Product + "</td><td id='genre_row" + table_len + "'>" + item.Genre + "</td><td id='submittedBy_row" + table_len + "'>" + item.Submitted + "</td><td><input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
+      var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + item.Product + "</td><td id='genre_row" + table_len + "'>" + item.Genre + "</td><td id='submittedBy_row" + table_len + "'>" + item.Submitted + "</td><td><input type='button' value='Delete' class='smallbutton' onclick='delete_row(" + table_len + ")'></td></tr>";
     }
 } //AddRows
 
@@ -36,7 +36,7 @@ function add_row()
   {
     var table = document.getElementById("data_table");
     var table_len = (table.rows.length) - 1;
-    var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + new_movieTitle + "</td><td id='genre_row" + table_len + "'>" + new_genre + "</td><td id='submittedBy_row" + table_len + "'>" + new_submittedBy + "</td><td><input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
+    var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + new_movieTitle + "</td><td id='genre_row" + table_len + "'>" + new_genre + "</td><td id='submittedBy_row" + table_len + "'>" + new_submittedBy + "</td><td><input type='button' value='Delete' class='smallbutton' onclick='delete_row(" + table_len + ")'></td></tr>";
 
     document.getElementById("new_movieTitle").value = "";
     document.getElementById("new_genre").value = "";
