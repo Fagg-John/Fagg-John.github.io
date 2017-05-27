@@ -51,12 +51,12 @@ function add_row()
         var item1 = items[i];
         var itemnew = { Product: item1.Product, Genre: item1.Genre, Submitted: item1.Submitted };
         movies.push(itemnew);
+        saveAllToLocalStorage();
       }
     }
 
     movies.push(item);
     saveMoviewList();
-    saveAllToLocalStorage();
 
     console.log(movies);
   }
@@ -112,8 +112,8 @@ function GotData(data)
   {
     var items = JSON.parse(data.target.response)
     AddRows(items);
+    saveAllToLocalStorage();
   }
-  saveAllToLocalStorage();
 } //GotData
 
 function saveAllToLocalStorage()
