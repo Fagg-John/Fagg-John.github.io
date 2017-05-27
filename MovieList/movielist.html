@@ -8,12 +8,12 @@
 </head>
 <body>
     <div id="movies" class="automargin">
-        <input type="button" class="button" value="Retrieve AJAX/JSON" onclick="GetViaAJAX();">
-        <input type="button" class="button" value="Clear Local Storage" onclick="ClearLocalStorage();">
+        <input type="button" class="button" value="Retrieve AJAX/JSON" onclick="GetViaAJAX();" />
+        <input type="button" class="button" value="Clear Local Storage" onclick="ClearLocalStorage();" />
         <br>
         <br>
-        
-        <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+
+    <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
         <tr>
             <th>Movie Title</th>
             <th>Genre</th>
@@ -23,12 +23,12 @@
         <tr>
         <tr id="row1"><td align="center" id="movieTitle_row1">Casa Blanca</td><td id="genre_row1">Romance</td><td id="submittedBy_row1">Brother James</td><td></td></tr>
         <tr id="row2"><td id="movieTitle_row2">Whats Up, Doc</td><td id="genre_row2">Comedy</td><td id="submittedBy_row2">Brother James</td><td></td></tr>
-            <td><input type="text" id="new_movieTitle"></td>
-            <td><input type="text" id="new_genre"></td>
-            <td><input type="text" id="new_submittedBy"></td>
-            <td><input type="button" class="smallbutton" onclick="add_row();" value="Add Row"></td>
-        </tr>
-        </table>
+            <td><input type="text" id="new_movieTitle" /></td>
+            <td><input type="text" id="new_genre" /></td>
+            <td><input type="text" id="new_submittedBy" /></td>
+            <td><input type="button" class="smallbutton" onclick="add_row();" value="Add Row" /></td>
+       </tr>
+    </table>
     </div>
 </body>
 </html>
