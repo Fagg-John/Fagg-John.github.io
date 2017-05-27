@@ -85,7 +85,7 @@ var movies = [];
     if (window.XMLHttpRequest) {
       HR = new XMLHttpRequest();
       HR.onreadystatechange = GotData;
-      HR.open("GET", "movielist.JSON");
+      HR.open("GET", "movielists.JSON");
       HR.send();
     }
   } //GetViaAJAX
