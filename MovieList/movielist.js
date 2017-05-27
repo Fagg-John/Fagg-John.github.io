@@ -6,20 +6,20 @@ var movies = [];
       items = JSON.parse(localStorage.getItem('moviesList'));
       AddRows(items);
     }
-  }
+  }//retrieveItem
 
   function AddRows(items){
     for (var i in items) {
       var item = items[i];
       var table = document.getElementById("data_table");
       var table_len = (table.rows.length) - 1;
-      var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + item.Product + "</td><td id='genre_row" + table_len + "'>" + item.Genre + "</td><td id='submittedBy_row" + table_len + "'>" + item.Submitted + "</td><td><input type='button' value='Delete' class='smallbutton' onclick='delete_row(" + table_len + ")'></td></tr>";
+      var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + item.Product + "</td><td id='genre_row" + table_len + "'>" + item.Genre + "</td><td id='submittedBy_row" + table_len + "'>" + item.Submitted + "</td><td><input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
     }
   } //AddRows
 
   function delete_row(no) {
     document.getElementById("row" + no + "").outerHTML = "";
-  } //delet_row
+  }//delete row
 
   function add_row() {
     var new_movieTitle = document.getElementById("new_movieTitle").value;
@@ -29,7 +29,7 @@ var movies = [];
     if (validate()) {
       var table = document.getElementById("data_table");
       var table_len = (table.rows.length) - 1;
-      var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + new_movieTitle + "</td><td id='genre_row" + table_len + "'>" + new_genre + "</td><td id='submittedBy_row" + table_len + "'>" + new_submittedBy + "</td><td><input type='button' value='Delete' class='smallbutton' onclick='delete_row(" + table_len + ")'></td></tr>";
+      var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='movieTitle_row" + table_len + "'>" + new_movieTitle + "</td><td id='genre_row" + table_len + "'>" + new_genre + "</td><td id='submittedBy_row" + table_len + "'>" + new_submittedBy + "</td><td><input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
 
       document.getElementById("new_movieTitle").value = "";
       document.getElementById("new_genre").value = "";
@@ -43,7 +43,7 @@ var movies = [];
           var itemnew = { Product: item1.Product, Genre: item1.Genre, Submitted: item1.Submitted };
           movies.push(itemnew);
         }
-      }//add row
+      }
 
       movies.push(item);
       saveMoviewList();
@@ -85,7 +85,7 @@ var movies = [];
     if (window.XMLHttpRequest) {
       HR = new XMLHttpRequest();
       HR.onreadystatechange = GotData;
-      HR.open("GET", "movielists.JSON");
+      HR.open("GET", "movieslist.JSON");
       HR.send();
     }
   } //GetViaAJAX
