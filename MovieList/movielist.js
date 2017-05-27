@@ -51,7 +51,6 @@ function add_row()
         var item1 = items[i];
         var itemnew = { Product: item1.Product, Genre: item1.Genre, Submitted: item1.Submitted };
         movies.push(itemnew);
-        saveAllToLocalStorage();
       }
     }
 
@@ -112,21 +111,5 @@ function GotData(data)
   {
     var items = JSON.parse(data.target.response)
     AddRows(items);
-    saveAllToLocalStorage();
   }
 } //GotData
-
-function saveAllToLocalStorage()
-{
-  var item = { Product: new_movieTitle, Genre: new_genre, Submitted: new_submittedBy };
-  if (localStorage.moviesList && movies.length == 0)
-  {
-    items = JSON.parse(localStorage.getItem('moviesList'));
-    for (var i in items)
-    {
-      var item1 = items[i];
-      var itemnew = { Product: item1.Product, Genre: item1.Genre, Submitted: item1.Submitted };
-      movies.push(itemnew);
-    }
-  }
-}
