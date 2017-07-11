@@ -1,1 +1,66 @@
-l
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+  <title>Fortune game Score</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" type="text/css" href="list.css">
+</head>
+<body onload="GenerateTable()">
+<div class="mainButtons">
+<div class="mainButtonsInner"><input type="button" class="button" value="Refresh Score" onclick="GenerateTable()" /></div>
+<!--<div class="mainButtonsInner">
+<input type="button" class="button" value="New Game" onclick="location.href='index.html';"/>
+</div>-->
+</div>
+<br>
+<!--<hr />-->
+<div id="dvTable">
+</div>
+<script type="text/javascript">
+function GenerateTable() {
+
+    //Build an array containing Customer records.
+    var scoreList = new Array();
+    scoreList.push(["Word", "Score", "Time"]);
+    var key = localStorage.getItem('player_name');
+    items=JSON.parse(localStorage.getItem(key));
+    for (var i in items) {
+         var item = items[i];
+            scoreList.push([item.word, item.score, item.totalTimeTaken]);
+   
+     }
+ 
+    //Create a HTML Table element.
+    var table = document.createElement("TABLE");
+    table.border = "1";
+ 
+    //Get the count of columns.
+    var columnCount = scoreList[0].length;
+ 
+    //Add the header row.
+    var row = table.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("TH");
+        headerCell.innerHTML = scoreList[0][i];
+        row.appendChild(headerCell);
+    }
+ 
+    //Add the data rows.
+    for (var i = 1; i < scoreList.length; i++) {
+        row = table.insertRow(-1);
+        for (var j = 0; j < columnCount; j++) {
+            var cell = row.insertCell(-1);
+            cell.innerHTML = scoreList[i][j];
+        }
+    }
+ 
+    var dvTable = document.getElementById("dvTable");
+    dvTable.innerHTML = "";
+    dvTable.appendChild(table);
+}
+</script>
+</body>
+</html>
