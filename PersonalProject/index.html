@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Guess</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="jiggle.css">
+  <script type="text/javascript" src="words.json"></script>
+  <script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript" src="name.js"></script> 
+  <script type="text/javascript" src="localstorage.js"></script>
 
+</head>
+<body onload="makeGame();">
+<!--<h1>Fortune Letter</h1>-->
+<div id="div-name">
+<div class="textCenter"><a onclick="" >Give me a name </a></div>
+<div class="textCenter">
+
+<input type="text" name="name" id="name" placeholder="Your name">
+<input type="submit" name="submit" value="Save" onclick="saveName(document.getElementById('name').value)">
+<input type="hidden" value="" id="pname" name="pname">
+</div>
+
+</div>
+<div id="div-show-name" style="display: none">
+<div class="textCenter">Hey, <span id="showname"></span> 
+<span id="changenameSpan">
+<br>
+<a id="changename" onclick="changeUser();" href="javascript:void(0)"> change Name? </a>
+</span>
+</div> 
+</div>
+
+</div>
+<div id="game" class="stacked"></div>
+ <div class="textCenter"><span>Number of guesses: <span id="counter"></span></span><br>
+ <span id="current_time"></span>
+ <span id="current_time_reset"></span>
+ </div>
+<div id="azstring" style="text-align: center;padding: 14px;"></div>
+<div id="options" class="mainButtons">
+
+<button class="button mainButtonsInner makeGame" onclick="makeGame();" >New game</button>
+<button id="startGameButton" class="button mainButtonsInner makeGame" onclick="startGameTime();" >Start</button>
+<button class="button mainButtonsInner makeGame" onclick="openInNewTab('list.html');">Score</button>
+</div>
+
+</body>
+</html>
