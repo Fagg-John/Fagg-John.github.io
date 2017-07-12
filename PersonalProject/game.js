@@ -288,7 +288,7 @@ if (isClassDisExists.length > 0) {
 //}
 return false;
 }
-function setJinggle(word){
+function setWiggle(word){
 	
 	var inactiveAbcClass = setTimeout(function() {
 		var active = document.querySelector(".abc");
