@@ -126,7 +126,7 @@ function pickLetter(letter){
 			if (localStorage.player_name != undefined) {
 				//setUpStorage(localStorage.player_name);
 				if(setScore==0){ 
-					//setJinggle(fWord);
+					setWiggle(fWord);
 					localStore(localStorage.player_name,fWord,counter,timeTaken);
 					setScore = 1;
 				}
@@ -134,7 +134,7 @@ function pickLetter(letter){
 				saveName('guest');
 				//setUpStorage('guest');
 				if(setScore==0){ 
-					//setwiggle(fWord);
+					setWiggle(fWord);
 					localStore('guest',fWord,counter,timeTaken);
 					setScore = 1;
 				}
