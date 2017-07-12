@@ -1,1 +1,42 @@
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
 
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+#dvTable{
+    display: flex;
+    justify-content: center;
+} 
+.button {
+    background: #0b7fba;
+    border: 0;
+    color: #fff;
+    padding: 1em 4em;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+   
+}
+.mainButtons
+{
+    width:100%;
+    text-align: center;
+}
+.mainButtonsInner
+{
+    display: inline-block;
+}
