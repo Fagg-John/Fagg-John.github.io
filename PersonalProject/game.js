@@ -134,7 +134,7 @@ function pickLetter(letter){
 				saveName('guest');
 				//setUpStorage('guest');
 				if(setScore==0){ 
-					//setJinggle(fWord);
+					//setwiggle(fWord);
 					localStore('guest',fWord,counter,timeTaken);
 					setScore = 1;
 				}
@@ -253,7 +253,7 @@ function openInNewTab(url) {
 function createAZ(){
 	var html = '';
 	var i=0;
-	var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 		alphabet.forEach(function(entry) {
 
            html +="<a onclick='checkchrExist(\""+entry+"\")' class='thisletter dis' style='text-decoration:none;' href='javascript:void(0)' ><span id='"+entry+"' class='az'>"+entry+"</span></a>";
