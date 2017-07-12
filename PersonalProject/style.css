@@ -1,5 +1,4 @@
-body
-{
+body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 1.2em;
   margin: 0 auto;
@@ -9,10 +8,7 @@ body
   background: #B20940;
   color: #fff;
   font-weight: 300;
-}
-
-#wordbox
-{
+}#wordbox {
     /*opacity: 0;*/
     margin: 10px auto 0;
     display: block;
@@ -26,107 +22,93 @@ body
     transition: 1s linear;
 }
 
-#button
-{
+#button {
   background: #0b7fba;
-  border: 0;
-  color: #fff;
-  font-size: 20px;
-  padding: 1em 2em;
-  cursor: pointer;
-  margin: 0 auto 0px;
-  display: block;
-  text-align: center;
-  border-radius: 6px;
-  font-weight: bold;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 1em 2em;
+    cursor: pointer;
+    margin: 0 auto 0px;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
 }
-
-.button
-{
+.button {
   background: #0b7fba;
-  border: 0;
-  color: #fff;
-  font-size: 20px;
-  padding: 1em 2em;
-  cursor: pointer;
-  /*margin: 0 auto 60px;*/
-  display: block;
-  text-align: center;
-  border-radius: 6px;
-  font-weight: bold;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 1em 2em;
+    cursor: pointer;
+    /*margin: 0 auto 60px;*/
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
 }
-
-h1
-{
+h1 {
   text-align: center;
+ 
 }
-
 /*Start game css*/
-#options
-{
-  text-align: center;
-  margin: 10px auto;
+#options{
+    text-align: center;
+    margin: 10px auto;
 }
-
-button.makeGame
-{
-  font-size: 1em;
-  display: inline-block;
-  /* margin-right: 20px; */
+button.makeGame {
+    font-size: 1em;
+    display: inline-block;
+   /* margin-right: 20px; */
 }
-
-.card
-{
+.card {
    /* width: 150px;
-   height: 176px; */
-   width: 80px;
-   height: 75px;
-   margin: 5px;
-   position: relative;
-   font-size: 4em;
-   display: table;
-   cursor: pointer;
+    height: 176px; */
+    width: 80px;
+    height: 75px;
+    margin: 5px;
+    position: relative;
+    font-size: 4em;
+    display: table;
+    cursor: pointer;
 }
 
-#game.stacked
-{
-  width: 150px;
-  height: 184px;
-  overflow: hidden;
-  -webkit-transition: width 2s, height 2s ease 2s;
-  transition: width 2s, height 2s ease 2s;
+#game.stacked{
+    width: 150px;
+    height: 184px;
+    overflow: hidden;
+    -webkit-transition: width 2s, height 2s ease 2s;
+    transition: width 2s, height 2s ease 2s;
 }
 
-div#game
-{
-  display: flex;
-  flex-wrap: wrap;
-  width: 70%;
-  text-align: center;
-  margin: 0 auto;
-  -webkit-transition: width 2s, height 2s ease 2s;
-  transition: width 2s, height 2s ease 2s;
+div#game {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-transition: width 2s, height 2s ease 2s;
+    transition: width 2s, height 2s ease 2s;
+
 }
 
-#game.restack
-{
-  width: 161px;
-  height: 184px;
-  overflow: hidden;
-  -webkit-transition: width 2s, height 2s ease 2s;
-  transition: width 2s, height 2s ease 2s;
+#game.restack{
+    width: 161px;
+    height: 184px;
+    overflow: hidden;
+    -webkit-transition: width 2s, height 2s ease 2s;
+    transition: width 2s, height 2s ease 2s;
 }
 
-.found
-{
-  color:white;
+.found{
+    color:white;
 }
 
 
 /* Styles started from http://callmenick.com/post/css-transitions-transforms-animations-flipping-card. Changes some now but want to give credit.*/
   .card .front,
-  .card .back
-  {
+  .card .back {
     position: absolute;
     top: 0;
     left: 0;
@@ -135,8 +117,7 @@ div#game
   }
 
   .card .front,
-  .card .back
-  {
+  .card .back {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     -webkit-transition: -webkit-transform 0.3s;
@@ -144,53 +125,45 @@ div#game
     border-radius: 10px;
   }
 
-  .card .front
-  {
+  .card .front {
     background-color: lightgreen;
     color:white;
     -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg);
   }
 
-  .card .back
-  {
+  .card .back {
    /* background: url("back-pattern.svg");*/
     background-color:lightblue;
     /*border:1px solid black;*/
   }
 
-  .card .back:hover
-  {
+  .card .back:hover{
       background-color: cadetblue;
   }
 
-  .card.flipped .front, .card.found .front
-  {
+  .card.flipped .front, .card.found .front {
       -webkit-transform: rotateY(0);
             transform: rotateY(0);
   }
 
-  .card.flipped .back, .card.found .back
-  {
+  .card.flipped .back, .card.found .back {
     -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg);
   }
 
-  .front span
-  {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    height: 20px;
-    color: #fff;
-    line-height: 20px;
+  .front span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        height: 20px;
+        color: #fff;
+        line-height: 20px;
   }
-  
-  .card.found .front
-  {
+  .card.found .front{
     animation: wiggle .3s linear alternate;
   }
 
@@ -215,56 +188,45 @@ div#game
     .flippedBcolor{
        background-color:lightblue;
     }
-input[type=text]
-{
-  width: 30%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
+input[type=text] {
+width: 30%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
 }
-input[type=button], input[type=submit], input[type=reset]
-{
-  background-color: #0b7fba;
-  border: none;
-  color: white;
-  padding: 14.5px 31px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
+input[type=button], input[type=submit], input[type=reset] {
+background-color: #0b7fba;
+border: none;
+color: white;
+padding: 14.5px 31px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
 }
-
-.textCenter
-{
+.textCenter{
   text-align: center
 }
-
-#changenameSpan
-{
-  font-style: oblique;  
+#changenameSpan{
+  font-style: oblique;
+  
 }
-
-#changename
-{
+#changename{
   color: #fff;
 }
-
 .mainButtons
 {
-  width:100%;
-  text-align: center;
+    width:100%;
+    text-align: center;
 }
-
 .mainButtonsInner
 {
-  display: inline-block;
+    display: inline-block;
 }
-
-.az
-{ 
-  padding: 15px;
-  color: coral;
-  background-color: beige;
-  position: relative;
-  border-radius: 5px;
-  margin:0.5%;
+.az{ 
+padding: 15px;
+color: coral;
+background-color: beige;
+position: relative;
+border-radius: 5px;
+margin:0.5%;
 }
