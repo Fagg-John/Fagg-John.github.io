@@ -1,4 +1,5 @@
 var counter;
+var misses;
 var winCounter = 0;
 var words = JSON.parse(data);
 var startTime;
@@ -22,9 +23,11 @@ function makeGame(){
     setScore = 0;
 	var letters = [];
 	counter = 0;
+	misses = 0;
 	winCounter = 0;
 
 	document.getElementById("counter").innerHTML = counter;
+	document.getElementById("misses").innerHTML = counter;
 	randWord = findWord();
 	//var randWord = words[Math.floor(Math.random() * words.length)];
 	fWord = randWord;
@@ -84,11 +87,11 @@ function shuffleArray(array) {
 function pickLetter(letter){
     
 	counter++;
-	if(counter >=10){
+	if(misses >=10){
 		alert('You have attempted  10 chances');
 		var timeTaken = timerHtml();
 		stopTimer();
-		counter = 10;
+		counter --;
 		turnOn();
        	if (localStorage.player_name != undefined) {
        		//setUpStorage(localStorage.player_name);
@@ -114,9 +117,14 @@ function pickLetter(letter){
         var i;
         for (i = 0; i < x.length; i++) {
           x[i].classList.add("flipped"); 
+          x[i].classList.add("abc"); 
 
-    }
- }
+    	}
+    	setJinggle();
+ 	}else{
+ 		misses++;
+ 		document.getElementById("misses").innerHTML = misses;
+ 	}
 	var flippedNum = totalFlippedClass();
 	if(flippedNum == winCounter){
 		setTimeout(function(){
@@ -126,7 +134,7 @@ function pickLetter(letter){
 			if (localStorage.player_name != undefined) {
 				//setUpStorage(localStorage.player_name);
 				if(setScore==0){ 
-					//setWiggle(fWord);
+					//setJinggle(fWord);
 					localStore(localStorage.player_name,fWord,counter,timeTaken);
 					setScore = 1;
 				}
@@ -134,7 +142,7 @@ function pickLetter(letter){
 				saveName('guest');
 				//setUpStorage('guest');
 				if(setScore==0){ 
-					//setWiggle(fWord);
+					//setJinggle(fWord);
 					localStore('guest',fWord,counter,timeTaken);
 					setScore = 1;
 				}
@@ -264,11 +272,11 @@ function createAZ(){
 		});
 		document.getElementById("azstring").innerHTML = html;
 }
-function checkchrExist(c){
-
+function checkchrExist(l){
+var c = l.toLowerCase();
 /*var divAzstring = document.getElementById('azstring');
 console.log( divAzstring.classList.contains("dis") );*/
-var activeC = document.querySelector("#"+c);
+var activeC = document.querySelector("#"+c.toUpperCase());
 pickLetter(c);
 var isClassExists = document.getElementsByClassName(c);
 var isClassDisExists = document.getElementsByClassName('dis');
@@ -288,7 +296,7 @@ if (isClassDisExists.length > 0) {
 //}
 return false;
 }
-function setWiggle(word){
+function setJinggle(){
 	
 	var inactiveAbcClass = setTimeout(function() {
 		var active = document.querySelector(".abc");
@@ -306,11 +314,8 @@ function turnOn(){
  }
 }
 function findWord(){
-
 	var randWord = words[Math.floor(Math.random() * words.length)];
-
 	if(randWord.length>=8){
-		alert(randWord.length);
        findWord();
 	}
   return randWord;
