@@ -47,7 +47,7 @@
     background-repeat:no-repeat;
     background-position:center center;
     background-size: 100% 100%, auto;
-    background-color: lightgrey;
+    background-color: WhiteSmoke;
     filter: alpha(opacity = 60); /* MSIE */
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
