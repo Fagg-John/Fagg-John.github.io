@@ -5,7 +5,8 @@ body {
   max-width: 960px;
   padding: 0px;
   line-height: 1.65em;
-  background: #B20940;
+  /* background: #B20940; */
+  background: DarkBlue;
   color: #fff;
   font-weight: 300;
 }#wordbox {
