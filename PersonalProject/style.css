@@ -147,7 +147,7 @@ div#game {
   }
 
   .card .front {
-    background-color: cadetblue;
+    background-color: CadetBlue;
     color: white;
     -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg);
