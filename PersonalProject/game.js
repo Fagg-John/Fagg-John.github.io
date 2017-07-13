@@ -12,8 +12,10 @@ function startGameTime(){
 	setTimeout(timer, 1000);
     document.getElementById("current_time").style.display = 'block'; 
     document.getElementById("startGameButton").disabled = true; 
-}
+	
+    
 
+}
 function makeGame(){
 	stopTimer();
 	createAZ();
@@ -118,7 +120,7 @@ function pickLetter(letter){
           x[i].classList.add("abc"); 
 
     	}
-    	setWiggle();
+    	setJinggle();
  	}else{
  		misses++;
  		document.getElementById("misses").innerHTML = misses;
