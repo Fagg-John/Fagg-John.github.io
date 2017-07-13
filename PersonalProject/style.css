@@ -159,7 +159,7 @@ div#game {
     /*border:1px solid black;*/
   }
 
-  .card .back:hover{
+  .button:hover{
       background-color: cadetblue;
   }
 
