@@ -120,7 +120,7 @@ function pickLetter(letter){
           x[i].classList.add("abc"); 
 
     	}
-    	setWiggle();
+    	setJinggle();
  	}else{
  		misses++;
  		document.getElementById("misses").innerHTML = misses;
@@ -296,7 +296,7 @@ if (isClassDisExists.length > 0) {
 //}
 return false;
 }
-function setWiggle(){
+function setJinggle(){
 	
 	var inactiveAbcClass = setTimeout(function() {
 		var active = document.querySelector(".abc");
