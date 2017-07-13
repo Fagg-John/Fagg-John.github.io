@@ -87,7 +87,7 @@ function shuffleArray(array) {
 function pickLetter(letter){
     
 	counter++;
-	if(misses >=10){
+	if(misses >=8){
 		alert('You have attempted  10 chances');
 		var timeTaken = timerHtml();
 		stopTimer();
@@ -128,7 +128,7 @@ function pickLetter(letter){
 	var flippedNum = totalFlippedClass();
 	if(flippedNum == winCounter){
 		setTimeout(function(){
-			if (confirm("Congrats! \n\n You have found all the letters! \n\nWould you like to start a new game?")){
+			if (confirm("Congrats! \n\n You have found all the letters! \n\n To Play Again - Press NEW GAME")){
 			var timeTaken = timerHtml();
 			stopTimer();
 			if (localStorage.player_name != undefined) {
