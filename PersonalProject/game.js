@@ -12,10 +12,8 @@ function startGameTime(){
 	setTimeout(timer, 1000);
     document.getElementById("current_time").style.display = 'block'; 
     document.getElementById("startGameButton").disabled = true; 
-	
-    
-
 }
+
 function makeGame(){
 	stopTimer();
 	createAZ();
@@ -87,7 +85,7 @@ function shuffleArray(array) {
 function pickLetter(letter){
     
 	counter++;
-	if(misses >=10){
+	if(misses ==10){
 		alert('You have attempted  10 chances');
 		var timeTaken = timerHtml();
 		stopTimer();
@@ -120,7 +118,7 @@ function pickLetter(letter){
           x[i].classList.add("abc"); 
 
     	}
-    	setJinggle();
+    	setWiggle();
  	}else{
  		misses++;
  		document.getElementById("misses").innerHTML = misses;
