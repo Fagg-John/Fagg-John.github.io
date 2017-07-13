@@ -11,7 +11,7 @@ function startGameTime(){
 	startTime = new Date();
 	setTimeout(timer, 1000);
     document.getElementById("current_time").style.display = 'block'; 
-    document.getElementById("startGameButton").disabled = true; 
+    //document.getElementById("startGameButton").disabled = true; 
 	
     
 
@@ -72,7 +72,7 @@ function makeGame(){
    
 	document.getElementById("current_time_reset").style.display = 'none';
 	document.getElementById("current_time").style.display = 'none';
-	document.getElementById("startGameButton").disabled = false; 
+	//document.getElementById("startGameButton").disabled = false; 
    //startGameTime();
 }
 function shuffleArray(array) {
@@ -272,11 +272,11 @@ function createAZ(){
 		});
 		document.getElementById("azstring").innerHTML = html;
 }
-function checkchrExist(l){
-var c = l.toLowerCase();
+function checkchrExist(c){
+//var c = l.toLowerCase();
 /*var divAzstring = document.getElementById('azstring');
 console.log( divAzstring.classList.contains("dis") );*/
-var activeC = document.querySelector("#"+c.toUpperCase());
+var activeC = document.querySelector("#"+c);
 pickLetter(c);
 var isClassExists = document.getElementsByClassName(c);
 var isClassDisExists = document.getElementsByClassName('dis');
@@ -299,8 +299,11 @@ return false;
 function setJinggle(){
 	
 	var inactiveAbcClass = setTimeout(function() {
-		var active = document.querySelector(".abc");
-		active.classList.remove("abc");
+		var active =  document.querySelectorAll('.abc');
+        var i;
+        for (i = 0; i < active.length; i++) {
+          active[i].classList.remove("abc"); 
+    	}
     }, 1000);
 }
 function turnOn(){
@@ -314,7 +317,8 @@ function turnOn(){
  }
 }
 function findWord(){
-	var randWord = words[Math.floor(Math.random() * words.length)];
+	var w = words[Math.floor(Math.random() * words.length)];
+	var randWord = w.toUpperCase();
 	if(randWord.length>=8){
        findWord();
 	}
