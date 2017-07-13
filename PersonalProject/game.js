@@ -85,7 +85,7 @@ function shuffleArray(array) {
 function pickLetter(letter){
     
 	counter++;
-	if(misses >=9){
+	if(misses >=10){
 		alert('You have attempted  10 chances');
 		var timeTaken = timerHtml();
 		stopTimer();
