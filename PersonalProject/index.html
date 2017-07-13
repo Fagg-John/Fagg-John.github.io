@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CIT261 - Word Guess</title>
+  <title>Fortune game</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="style.css">
    <link rel="stylesheet" type="text/css" href="wiggle.css">
   <script type="text/javascript" src="words.json"></script>
-  <script type="text/javascript" src="game.js"></script> 
+  <script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript" src="name.js"></script> 
   <script type="text/javascript" src="localstorage.js"></script>
 
 </head>
 <body onload="makeGame();">
-<h1>CIT261 - Word Guess</h1>
-<h2>You have 10 wrong guesses!</h2>
+  <h1>CIT261 - Word Guess</h1>
+  <h2>You have 10 Wrong Guesses!</h2>
 <div id="div-name">
-<div class="textCenter"><a onclick="" >Enter Youe Name: </a></div>
+<div class="textCenter"><a onclick="" >Enter Your Name </a></div>
 <div class="textCenter">
 
 <input type="text" name="name" id="name" placeholder="Your name">
@@ -43,19 +44,9 @@
 <div id="options" class="mainButtons">
 
 <button class="button mainButtonsInner makeGame" onclick="makeGame();" >New game</button>
-<!-- <button id="startGameButton" class="button mainButtonsInner makeGame" onclick="startGameTime();" >Start</button> -->
+<button id="startGameButton" class="button mainButtonsInner makeGame" onclick="startGameTime();" >Start</button>
 <button class="button mainButtonsInner makeGame" onclick="openInNewTab('list.html');">Score</button>
 </div>
-
-<script>
-
-//createAZ();
-</script>
-<!--
-<FORM NAME="WordForm">  
-<INPUT TYPE=TEXT NAME="WordBox" id="wordbox" maxlength="1"><BR>
-<INPUT TYPE=BUTTON VALUE="Go" onClick="pickLetter(document.getElementById('wordbox').value);" id="button">
-</FORM> -->
 
 </body>
 </html>
