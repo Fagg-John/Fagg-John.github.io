@@ -88,7 +88,7 @@ function pickLetter(letter){
     
 	counter++;
 	if(misses >=8){
-		alert('You have attempted 8 chances');
+		alert('You Lose! 8 Tries Attempted');
 		var timeTaken = timerHtml();
 		stopTimer();
 		counter --;
