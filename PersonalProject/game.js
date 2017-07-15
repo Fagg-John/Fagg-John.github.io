@@ -316,15 +316,15 @@ if (isClassDisExists.length > 0) {
 //}
 return false;
 }
-function setJinggle(){
-	
-	var inactiveAbcClass = setTimeout(function() {
-		var active =  document.querySelectorAll('.abc');
+
+function setJinggle()
+{
+	var inactiveAbcClass = setTimeout(function(){var active =  document.querySelectorAll('.abc');
         var i;
-        for (i = 0; i < active.length; i++) {
-          active[i].classList.remove("abc"); 
-    	}
-    }, 1000);
+        for (i = 0; i < active.length; i++)
+	{
+		active[i].classList.remove("abc");
+	}}, 1000);
 }
 
 function turnOn()
