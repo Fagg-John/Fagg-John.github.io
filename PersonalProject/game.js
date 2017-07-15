@@ -136,47 +136,49 @@ function pickLetter(letter)
  		document.getElementById("misses").innerHTML = misses;
  	}
 	var flippedNum = totalFlippedClass();
-	if(flippedNum == winCounter){
-		setTimeout(function(){
-			if (confirm("Congrats! \n\n You have found all the letters! \n\n To Play Again - Press NEW GAME")){
-			var timeTaken = timerHtml();
-			stopTimer();
-			if (localStorage.player_name != undefined) {
-				//setUpStorage(localStorage.player_name);
-				if(setScore==0){ 
-					//setJinggle(fWord);
-					localStore(localStorage.player_name,fWord,counter,timeTaken);
-					setScore = 1;
+	if(flippedNum == winCounter)
+	{
+		setTimeout(function()
+			   {
+				if (confirm("Congrats! \n\n You have found all the letters! \n\n To Play Again - Press NEW GAME"))
+				{
+					var timeTaken = timerHtml();
+					stopTimer();
+					if (localStorage.player_name != undefined)
+					{
+						if(setScore==0)
+						{
+							localStore(localStorage.player_name,fWord,counter,timeTaken);
+							setScore = 1;
+						}
+					}else{
+						saveName('guest');
+						if(setScore==0)
+						{
+							localStore('guest',fWord,counter,timeTaken);
+							setScore = 1;
+						}
+					}
 				}
-			}else{
-				saveName('guest');
-				//setUpStorage('guest');
-				if(setScore==0){ 
-					//setJinggle(fWord);
-					localStore('guest',fWord,counter,timeTaken);
-					setScore = 1;
-				}
-			}
-			//makeGame();
-
-		}
 		},200);
-	} 
-   /* no textbox document.getElementById('wordbox').value = '';
-    document.getElementById('wordbox').focus();*/
-}
-function totalFlippedClass(){
-	 var flippedClass = document.getElementsByClassName('flipped').length;
-	 return flippedClass;
+	}
 }
 
-function checkSpecialCharacter(letter){
-    if (!/[a-zA-Z]/.test(letter)) {
-        //alert('Sorry! special character and number is not allowed! ');
-        return false;
-    }
-    return true;
+function totalFlippedClass()
+{
+	var flippedClass = document.getElementsByClassName('flipped').length;
+	return flippedClass;
 }
+
+function checkSpecialCharacter(letter)
+{
+	if (!/[a-zA-Z]/.test(letter))
+	{
+		return false;
+	}
+	return true;
+}
+
 function timer() {
     // later record end time
     var endTime = new Date();
