@@ -69,13 +69,14 @@ function makeGame()
 	setTimeout(function()
 		   {
 		game.classList.remove("restack");}, 3000);
-   setTimeout(function(){
-        game.classList.remove("stacked");
-    }, 500);
+	setTimeout(function()
+	      {
+	   game.classList.remove("stacked");}, 500);
    
 	document.getElementById("current_time_reset").style.display = 'none';
 	document.getElementById("current_time").style.display = 'none';
 }
+
 //Function to shuffle the array
 function shuffleArray(array)
 {
@@ -219,22 +220,23 @@ function timer()
 	timerFlag = setTimeout(timer, 1000);
 }
 
-function stopTimer() {
-    clearTimeout(timerFlag);
+function stopTimer()
+{
+	clearTimeout(timerFlag);
 }
-function checkNameisSet(){
- 
-  if (localStorage.player_name != undefined) {
-    var div_name = document.getElementById('div-name');
-    var div_show_name = document.getElementById('div-show-name');
-    div_name.style.display = 'none';
-    div_show_name.style.display = 'block';
-    document.getElementById("showname").innerHTML = localStorage.getItem('player_name');
-    /*if(localStorage.getItem('player_name')=='guest'){
-        document.getElementById('changenameSpan').style.display = 'block';
-    }*/
-  }
+
+function checkNameisSet()
+{
+	if (localStorage.player_name != undefined)
+	{
+		var div_name = document.getElementById('div-name');
+		var div_show_name = document.getElementById('div-show-name');
+		div_name.style.display = 'none';
+		div_show_name.style.display = 'block';
+		document.getElementById("showname").innerHTML = localStorage.getItem('player_name');
+	}
 }
+
 function localStore(key,word,scored,totalTimeTaken) {
 	var item = { word: word,  score: scored,totalTimeTaken:totalTimeTaken };
 	score.push(item);
