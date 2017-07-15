@@ -89,6 +89,7 @@ function shuffleArray(array)
 	}
 	return array;
 }
+
 //Function: Choose letter, set counter, timer, localstorage....
 function pickLetter(letter)
 {
@@ -171,7 +172,7 @@ function totalFlippedClass()
 	return flippedClass;
 }
 
-function checkSpecialCharacter(letter)
+/*function checkSpecialCharacter(letter)
 {
 	if (!/[a-zA-Z]/.test(letter))
 	{
@@ -179,7 +180,9 @@ function checkSpecialCharacter(letter)
 	}
 	return true;
 }
+*/
 
+//Time setup
 function timer()
 {
 	//Record end time
