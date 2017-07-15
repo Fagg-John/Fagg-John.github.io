@@ -173,6 +173,7 @@ function totalFlippedClass()
 	return flippedClass;
 }
 
+//Check for Special Characters
 function checkSpecialCharacter(letter)
 {
 	if (!/[a-zA-Z]/.test(letter))
@@ -223,6 +224,7 @@ function timer()
 	timerFlag = setTimeout(timer, 1000);
 }
 
+//Clear the Timer Flag
 function stopTimer()
 {
 	clearTimeout(timerFlag);
@@ -240,6 +242,7 @@ function checkNameisSet()
 	}
 }
 
+//Function for Local Storage
 function localStore(key,word,scored,totalTimeTaken)
 {
 	var item = { word: word,  score: scored,totalTimeTaken:totalTimeTaken };
@@ -267,6 +270,7 @@ function timerHtml()
 	return totalTime;
 }
 
+//Function used to change the user
 function changeUser()
 {
 	var div_name = document.getElementById('div-name');
