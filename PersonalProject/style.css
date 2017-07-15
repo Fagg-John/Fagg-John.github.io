@@ -89,11 +89,11 @@ button.makeGame
   /* width: 80px;
   height: 75px;
   margin: 5px;*/
-  width: 60px;
-  height: 55px;
+  width: 65px;
+  height: 60px;
   margin: 5px;
   position: relative;
-  font-size: 4em;
+  font-size: 3em;
   display: table;
   cursor: pointer;
 }
