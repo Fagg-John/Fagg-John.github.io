@@ -309,12 +309,9 @@ function checkchrExist(c)
 	});
 
 }
-//if (isClassExists.length > 0) {
-// uncomment if we want to crossed out if character is in word.	
 	activeC.classList.add("grayout");
-	activeC.disabled = true; 
-//}
-return false;
+	activeC.disabled = true;
+	return false;
 }
 
 function setJinggle()
