@@ -238,6 +238,8 @@ function checkNameisSet()
 		var div_show_name = document.getElementById('div-show-name');
 		div_name.style.display = 'none';
 		div_show_name.style.display = 'block';
+		showReName = localStorage.getItem('player_name').replace('fortune_', '');
+		document.getElementById("showname").innerHTML = showReName;
 		document.getElementById("showname").innerHTML = localStorage.getItem('player_name');
 	}
 }
