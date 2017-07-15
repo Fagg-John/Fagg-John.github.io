@@ -278,33 +278,33 @@ function openInNewTab(url)
 	win.focus();
 }
 
-function createAZ(){
+function createAZ()
+{
 	var html = '';
 	var i=0;
 	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-		alphabet.forEach(function(entry) {
-
-           html +="<a onclick='checkchrExist(\""+entry+"\")' class='thisletter dis' style='text-decoration:none;' href='javascript:void(0)' ><span id='"+entry+"' class='az'>"+entry+"</span></a>";
-           if(i==12){
-           	html +='<br><br>';
-           }
-           	i++;
+	alphabet.forEach(function(entry) {
+		html +="<a onclick='checkchrExist(\""+entry+"\")' class='thisletter dis' style='text-decoration:none;' href='javascript:void(0)' ><span id='"+entry+"' class='az'>"+entry+"</span></a>";
+		if(i==12)
+		{
+			html +='<br><br>';
+		}
+		i++;
 		});
-		document.getElementById("azstring").innerHTML = html;
+	document.getElementById("azstring").innerHTML = html;
 }
-function checkchrExist(c){
-//var c = l.toLowerCase();
-/*var divAzstring = document.getElementById('azstring');
-console.log( divAzstring.classList.contains("dis") );*/
-var activeC = document.querySelector("#"+c);
-pickLetter(c);
-var isClassExists = document.getElementsByClassName(c);
-var isClassDisExists = document.getElementsByClassName('dis');
-if (isClassDisExists.length > 0) {
-	startGameTime();
-	//functionlity to check if dis is exit if exist then start game once any letter clicked first time.
-	var elems = document.querySelectorAll(".thisletter.dis");
-	[].forEach.call(elems, function(el) {
+
+function checkchrExist(c)
+{
+	var activeC = document.querySelector("#"+c);
+	pickLetter(c);
+	var isClassExists = document.getElementsByClassName(c);
+	var isClassDisExists = document.getElementsByClassName('dis');
+	if (isClassDisExists.length > 0)
+	{
+		startGameTime();
+		var elems = document.querySelectorAll(".thisletter.dis");
+		[].forEach.call(elems, function(el){
 		el.classList.remove("dis");
 	});
 
