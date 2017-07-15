@@ -133,7 +133,7 @@ function pickLetter(letter)
 			x[i].classList.add("flipped");
 			x[i].classList.add("abc");
 		}
-    	setJinggle();
+    	setWiggle();
  	}else{
  		misses++;
  		document.getElementById("misses").innerHTML = misses;
@@ -317,7 +317,7 @@ function checkchrExist(c)
 	return false;
 }
 
-function setJinggle()
+function setWiggle()
 {
 	var inactiveAbcClass = setTimeout(function() {
 		var active =  document.querySelectorAll('.abc');
