@@ -173,6 +173,7 @@ function totalFlippedClass()
 	return flippedClass;
 }
 
+function checkSpecialCharacter(letter)
 {
 	if (!/[a-zA-Z]/.test(letter))
 	{
