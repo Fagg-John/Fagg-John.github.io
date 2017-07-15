@@ -26,173 +26,178 @@ body
   transition: 1s linear;
 }
 
-#button {
+#button
+{
   background: #0b7fba;
-    border: 0;
-    color: #fff;
-    font-size: 20px;
-    padding: 1em 2em;
-    cursor: pointer;
-    margin: 0 auto 0px;
-    display: block;
-    text-align: center;
-    border-radius: 6px;
-    font-weight: bold;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  padding: 1em 2em;
+  cursor: pointer;
+  margin: 0 auto 0px;
+  display: block;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
 }
-.button {
-/*  background: #0b7fba;
-    border: 0;
-    color: #fff;
-    font-size: 20px;
-    padding: 1em 2em;
-    cursor: pointer;
-    /*margin: 0 auto 60px;
-    display: block;
-    text-align: center;
-    border-radius: 6px;
-    font-weight: bold; */
-    padding: 5px 15px;
-    font-size: 15px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: white;
-    background-color: lightblue;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+
+.button
+{
+  padding: 5px 15px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: lightblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
+
 .button:active
 {
-    background-color: lightblue;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+  background-color: lightblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
-h1 {
+
+h1
+{
   text-align: center;
- 
 }
-h2 {
+
+h2
+{
   text-align: center;
- 
-}
-/*Start game css*/
-#options{
-    text-align: center;
-    margin: 10px auto;
-}
-button.makeGame {
-    font-size: 1em;
-    display: inline-block;
-   /* margin-right: 20px; */
-}
-.card {
-   /* width: 150px;
-    height: 176px; */
-    width: 80px;
-    height: 75px;
-    margin: 5px;
-    position: relative;
-    font-size: 4em;
-    display: table;
-    cursor: pointer;
 }
 
-#game.stacked{
-    width: 150px;
-    height: 184px;
-    overflow: hidden;
-    -webkit-transition: width 2s, height 2s ease 2s;
-    transition: width 2s, height 2s ease 2s;
+#options
+{
+  text-align: center;
+  margin: 10px auto;
 }
 
-div#game {
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
-    -webkit-transition: width 2s, height 2s ease 2s;
-    transition: width 2s, height 2s ease 2s;
-
+button.makeGame
+{
+  font-size: 1em;
+  display: inline-block;
 }
 
-#game.restack{
-    width: 161px;
-    height: 184px;
-    overflow: hidden;
-    -webkit-transition: width 2s, height 2s ease 2s;
-    transition: width 2s, height 2s ease 2s;
+.card
+{
+  width: 80px;
+  height: 75px;
+  margin: 5px;
+  position: relative;
+  font-size: 4em;
+  display: table;
+  cursor: pointer;
 }
 
-.found{
-    color:white;
+#game.stacked
+{
+  width: 150px;
+  height: 184px;
+  overflow: hidden;
+  -webkit-transition: width 2s, height 2s ease 2s;
+  transition: width 2s, height 2s ease 2s;
+}
+
+div#game
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transition: width 2s, height 2s ease 2s;
+  transition: width 2s, height 2s ease 2s;
+}
+
+#game.restack
+{
+  width: 161px;
+  height: 184px;
+  overflow: hidden;
+  -webkit-transition: width 2s, height 2s ease 2s;
+  transition: width 2s, height 2s ease 2s;
+}
+
+.found
+{
+  color:white;
 }
 
 
-/* Styles started from http://callmenick.com/post/css-transitions-transforms-animations-flipping-card. Changes some now but want to give credit.*/
-  .card .front,
-  .card .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.card .front, .card .back
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  .card .front,
-  .card .back {
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 0.3s;
-            transition: transform 0.3s;
-    border-radius: 10px;
-  }
+.card .front, .card .back
+{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
 
-  .card .front {
-    background-color: CadetBlue;
-    color: white;
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-  }
+.card .front
+{
+  background-color: CadetBlue;
+  color: white;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
 
-  .card .back {
-   /* background: url("back-pattern.svg");*/
-    background-color:lightblue;
-    /*border:1px solid black;*/
-  }
+.card .back
+{
+  background-color:lightblue;
+}
 
-  .button:hover{
-      background-color: cadetblue;
-  }
+.button:hover
+{
+  background-color: cadetblue;
+}
 
-  .card.flipped .front, .card.found .front {
-      -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
+.card.flipped .front, .card.found .front
+{
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
 
-  .card.flipped .back, .card.found .back {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-  }
+.card.flipped .back, .card.found .back
+{
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
 
-  .front span {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        height: 20px;
-        color: #fff;
-        line-height: 20px;
-  }
-  .card.found .front{
-    animation: wiggle .3s linear alternate;
-  }
+.front span
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 20px;
+  color: #fff;
+  line-height: 20px;
+}
 
-  @keyframes wiggle
-    {
+.card.found .front
+{
+  animation: wiggle .3s linear alternate;
+}
+
+@keyframes wiggle
+{
         0%   {
           transform: rotate(20deg);
         }
@@ -246,17 +251,23 @@ cursor: pointer;
 {
     display: inline-block;
 }
-.az{ 
-padding: 15px;
-color: black;
-background-color: beige;
-position: relative;
-border-radius: 5px;
-margin:0.5%;
+
+.az
+{ 
+  padding: 15px;
+  color: black;
+  background-color: beige;
+  position: relative;
+  border-radius: 5px;
+  margin:0.5%;
 }
-.az:hover{
-      background-color: Gainsboro;
-  }
-.spanMisses{
-margin-left:10px;
+
+.az:hover
+{
+  background-color: Gainsboro;
+}
+
+.spanMisses
+{
+  margin-left:10px;
 }
