@@ -1,7 +1,8 @@
 var score = [];
 function createLocalStorageKey(name)
 {
-	localStorage.setItem('player_name',name); 
+	//localStorage.setItem('player_name',name);
+	localStorage.setItem('player_name','fortune_'+name);
 }
 
 function saveName(name)
