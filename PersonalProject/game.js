@@ -240,7 +240,7 @@ function checkNameisSet()
 		div_show_name.style.display = 'block';
 		showReName = localStorage.getItem('player_name').replace('fortune_', '');
 		document.getElementById("showname").innerHTML = showReName;
-		document.getElementById("showname").innerHTML = localStorage.getItem('player_name');
+		// document.getElementById("showname").innerHTML = localStorage.getItem('player_name');
 	}
 }
 
