@@ -291,7 +291,7 @@ function createAZ()
 		   html +='<br><br>';
 	   }
 		i++;
-	});
+	//});
 	document.getElementById("azstring").innerHTML = html;
 }
 
