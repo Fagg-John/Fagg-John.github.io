@@ -22,13 +22,29 @@ function GenerateTable()
     //Build an array containing Players Score.
     var scoreList = new Array();
     scoreList.push(["Player","Word", "Score", "Time"]);
-    var key = localStorage.getItem('player_name');
+    for ( var i = 0, len = localStorage.length; i < len; ++i )
+    {
+      var currentPname = localStorage.key( i );
+      if (currentPname.match(regexp))
+      {//console.log("matches!"+localStorage.key( i ));
+       //var keys = localStorage.getItem(localStorage.key( i ));
+        items=JSON.parse(localStorage.getItem(currentPname));
+        for (var j in items)
+        {
+          var item = items[j];
+          reName = currentPname.replace('fortune_', '');
+          scoreList.push([reName,item.word, item.score, item.totalTimeTaken]);
+        }
+      }
+    }
+  
+    /*var key = localStorage.getItem('player_name');
     items=JSON.parse(localStorage.getItem(key));
     for (var i in items)
     {
       var item = items[i];
       scoreList.push([key,item.word, item.score, item.totalTimeTaken]);
-    }
+    }*/
  
     //Create a HTML Table element.
     var table = document.createElement("TABLE");
