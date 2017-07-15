@@ -20,6 +20,7 @@
 function GenerateTable()
   {
     //Build an array containing Players Score.
+    var regexp = /fortune_(.*)/;
     var scoreList = new Array();
     scoreList.push(["Player","Word", "Score", "Time"]);
     for ( var i = 0, len = localStorage.length; i < len; ++i )
