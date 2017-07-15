@@ -75,54 +75,61 @@ function makeGame()
    
 	document.getElementById("current_time_reset").style.display = 'none';
 	document.getElementById("current_time").style.display = 'none';
-	//document.getElementById("startGameButton").disabled = false; 
-   //startGameTime();
 }
-function shuffleArray(array) {
-   for (var i = array.length - 1; i > 0; i--) {
-       var j = Math.floor(Math.random() * (i + 1));
-       var temp = array[i];
-       array[i] = array[j];
-       array[j] = temp;
-   }
-   return array;
+//Function to shuffle the array
+function shuffleArray(array)
+{
+	for (var i = array.length - 1; i > 0; i--)
+	{
+		var j = Math.floor(Math.random() * (i + 1));
+		var temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+	}
+	return array;
 }
-function pickLetter(letter){
-    
+//Function: Choose letter, set counter, timer, localstorage....
+function pickLetter(letter)
+{
 	counter++;
-	if(misses >=8){
+	//Check for missed letters and set to 8 misses or attempts
+	if(misses >=8)
+	{
 		alert('You Lose! 8 Tries Attempted');
 		var timeTaken = timerHtml();
 		stopTimer();
 		counter --;
 		turnOn();
-       	if (localStorage.player_name != undefined) {
-       		//setUpStorage(localStorage.player_name);
-       		if(setScore==0){ 
+		if (localStorage.player_name != undefined)
+		{
+       		//setup Local Straoge
+       		if(setScore==0)
+		{ 
        			localStore(localStorage.player_name,fWord,counter,timeTaken);
        			setScore = 1;
        		}
-   		}else{
+		}else{
 			saveName('guest');
-			//setUpStorage('guest');
 			localStore('guest',fWord,counter,timeTaken);
    		}
-       document.getElementById("counter").innerHTML = counter;
-       return false;
+		document.getElementById("counter").innerHTML = counter;
+		return false;
 	} 
 	document.getElementById("counter").innerHTML = counter;
 	var isLetter = checkSpecialCharacter(letter);
-	if(isLetter==false){
+	if(isLetter==false)
+	{
 		return false;
 	}
-    if (document.querySelector('.'+letter) !== null) {
-      x =  document.querySelectorAll('.'+letter);
-        var i;
-        for (i = 0; i < x.length; i++) {
-          x[i].classList.add("flipped"); 
-          x[i].classList.add("abc"); 
-
-    	}
+	if (document.querySelector('.'+letter) !== null)
+	{
+		x =  document.querySelectorAll('.'+letter);
+		var i;
+		for (i = 0; i < x.length; i++)
+		{
+			x[i].classList.add("flipped");
+			x[i].classList.add("abc");
+		}
     	setJinggle();
  	}else{
  		misses++;
