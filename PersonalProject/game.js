@@ -172,7 +172,6 @@ function totalFlippedClass()
 	return flippedClass;
 }
 
-/*function checkSpecialCharacter(letter)
 {
 	if (!/[a-zA-Z]/.test(letter))
 	{
@@ -180,7 +179,6 @@ function totalFlippedClass()
 	}
 	return true;
 }
-*/
 
 //Time setup
 function timer()
