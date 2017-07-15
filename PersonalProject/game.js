@@ -326,21 +326,27 @@ function setJinggle(){
     	}
     }, 1000);
 }
-function turnOn(){
-	if (document.querySelector('.card') !== null) {
-      x =  document.querySelectorAll('.card');
-        var i;
-        for (i = 0; i < x.length; i++) {
-          x[i].classList.add("flipped"); 
 
-    }
- }
+function turnOn()
+{
+	if (document.querySelector('.card') !== null)
+	{
+		x =  document.querySelectorAll('.card');
+		var i;
+		for (i = 0; i < x.length; i++)
+		{
+			x[i].classList.add("flipped");
+		}
+	}
 }
-function findWord(){
+
+function findWord()
+{
 	var w = words[Math.floor(Math.random() * words.length)];
 	var randWord = w.toUpperCase();
-	if(randWord.length>=8){
-       findWord();
+	if(randWord.length>=8)
+	{
+		findWord();
 	}
-  return randWord;
+	return randWord;
 }
