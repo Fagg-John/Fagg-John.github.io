@@ -314,7 +314,7 @@ function checkchrExist(c)
 	return false;
 }
 
-function setJinggle()
+function setWiggle()
 {
 	var inactiveAbcClass = setTimeout(function(){var active =  document.querySelectorAll('.abc');
         var i;
