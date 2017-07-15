@@ -4,18 +4,21 @@
     50% {-webkit-transform: rotateZ(-2deg);}
     100% {-webkit-transform: rotateZ(2deg);}
 }
+
 @-moz-keyframes wiggle
 {
     0% {-moz-transform: rotateZ(2deg);}
     50% {-moz-transform: rotateZ(-2deg);}
     100% {-moz-transform: rotateZ(2deg);}
 }
+
 @-o-keyframes wiggle
 {
     0% {-o-transform: rotateZ(2deg);}
     50% {-o-transform: rotateZ(-2deg);}
     100% {-o-transform: rotateZ(2deg);}
 }
+
 @keyframes wiggle
 {
     0% {transform: rotateZ(2deg);}
@@ -23,32 +26,32 @@
     100% {transform: rotateZ(2deg);}
 }
 
-.abc {
-   /* background-color: lightgreen;
-    width: 8%;
-    padding:2%;
-    margin-left: 44%;
-    border-radius: 10px;*/
+.abc
+{
     -webkit-animation: wiggle 0.2s ease infinite;
     -moz-animation: wiggle 0.2s ease infinite;
     -o-animation: wiggle 0.2s ease infinite;
     animation: wiggle 0.2s ease infinite;
 }
-.atoz{
+
+.atoz
+{
     background-color: lightgreen;
     width: 50%;
     padding:2%;
     margin-left: 25%;
     border-radius: 10px;
 }
-.grayout {
-    opacity: 0.6; /* Real browsers */
+
+.grayout
+{
+    opacity: 0.6;
     background: url("1499384208_gtk-close.png");
     background-repeat:no-repeat;
     background-position:center center;
     background-size: 100% 100%, auto;
     background-color: WhiteSmoke;
-    filter: alpha(opacity = 60); /* MSIE */
+    filter: alpha(opacity = 60);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     font-weight: bold;
