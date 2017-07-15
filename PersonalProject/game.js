@@ -237,76 +237,83 @@ function checkNameisSet()
 	}
 }
 
-function localStore(key,word,scored,totalTimeTaken) {
+function localStore(key,word,scored,totalTimeTaken)
+{
 	var item = { word: word,  score: scored,totalTimeTaken:totalTimeTaken };
 	score.push(item);
-	
-    return window.localStorage.setItem(key, JSON.stringify(score));
+	return window.localStorage.setItem(key, JSON.stringify(score));
 }
-function setUpStorage(key){
-		items=JSON.parse(localStorage.getItem(key));
-		for (var i in items) {
-			var itemOld = items[i];
-			var itemNew = { word: itemOld.word,  score: itemOld.score }; 
-			score.push(itemNew);
-		}
+
+function setUpStorage(key)
+{
+	items=JSON.parse(localStorage.getItem(key));
+	for (var i in items)
+	{
+		var itemOld = items[i];
+		var itemNew = { word: itemOld.word,  score: itemOld.score };
+		score.push(itemNew);
+	}
 }
-function timerHtml(){
+
+function timerHtml()
+{
 	document.getElementById("current_time").style.display = 'none';
 	document.getElementById("current_time_reset").style.display = 'block';
 	document.getElementById("current_time_reset").innerHTML = '00:00:00';
 	var totalTime = document.getElementById("current_time").innerHTML;
 	return totalTime;
 }
-function changeUser() {
-	var div_name = document.getElementById('div-name');
-    var div_show_name = document.getElementById('div-show-name');
-    div_name.style.display = 'block';
-    div_show_name.style.display = 'none';
-}
-function openInNewTab(url) {
-  var win = window.open(url, '_blank');
 
-  win.focus();
+function changeUser()
+{
+	var div_name = document.getElementById('div-name');
+	var div_show_name = document.getElementById('div-show-name');
+	div_name.style.display = 'block';
+	div_show_name.style.display = 'none';
 }
-function createAZ(){
+
+function openInNewTab(url)
+{
+	var win = window.open(url, '_blank');
+	win.focus();
+}
+
+function createAZ()
+{
 	var html = '';
 	var i=0;
 	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-		alphabet.forEach(function(entry) {
-
-           html +="<a onclick='checkchrExist(\""+entry+"\")' class='thisletter dis' style='text-decoration:none;' href='javascript:void(0)' ><span id='"+entry+"' class='az'>"+entry+"</span></a>";
-           if(i==12){
-           	html +='<br><br>';
-           }
-           	i++;
-		});
-		document.getElementById("azstring").innerHTML = html;
-}
-function checkchrExist(c){
-//var c = l.toLowerCase();
-/*var divAzstring = document.getElementById('azstring');
-console.log( divAzstring.classList.contains("dis") );*/
-var activeC = document.querySelector("#"+c);
-pickLetter(c);
-var isClassExists = document.getElementsByClassName(c);
-var isClassDisExists = document.getElementsByClassName('dis');
-if (isClassDisExists.length > 0) {
-	startGameTime();
-	//functionlity to check if dis is exit if exist then start game once any letter clicked first time.
-	var elems = document.querySelectorAll(".thisletter.dis");
-	[].forEach.call(elems, function(el) {
-		el.classList.remove("dis");
+	alphabet.forEach(function(entry)
+			 {
+		html +="<a onclick='checkchrExist(\""+entry+"\")' class='thisletter dis' style='text-decoration:none;' href='javascript:void(0)' ><span id='"+entry+"' class='az'>"+entry+"</span></a>";
+           if(i==12)
+	   {
+		   html +='<br><br>';
+	   }
+		i++;
 	});
+	document.getElementById("azstring").innerHTML = html;
+}
 
-}
-//if (isClassExists.length > 0) {
-// uncomment if we want to crossed out if character is in word.	
+function checkchrExist(c)
+{
+	var activeC = document.querySelector("#"+c);
+	pickLetter(c);
+	var isClassExists = document.getElementsByClassName(c);
+	var isClassDisExists = document.getElementsByClassName('dis');
+	if (isClassDisExists.length > 0)
+	{
+		startGameTime();
+		var elems = document.querySelectorAll(".thisletter.dis");
+		[].forEach.call(elems, function(el)
+				{el.classList.remove("dis");});
+	}
 	activeC.classList.add("grayout");
-	activeC.disabled = true; 
-//}
-return false;
+	activeC.disabled = true;
+	}
+	return false;
 }
+
 function setJinggle(){
 	
 	var inactiveAbcClass = setTimeout(function() {
