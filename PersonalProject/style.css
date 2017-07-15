@@ -217,39 +217,48 @@ div#game
     .flippedBcolor{
        background-color:lightblue;
     }
-input[type=text] {
-width: 30%;
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
+input[type=text]
+{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
-input[type=button], input[type=submit], input[type=reset] {
-background-color: #0b7fba;
-border: none;
-color: white;
-padding: 14.5px 31px;
-text-decoration: none;
-margin: 4px 2px;
-cursor: pointer;
+input[type=button], input[type=submit], input[type=reset]
+{
+  background-color: #0b7fba;
+  border: none;
+  color: white;
+  padding: 14.5px 31px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-.textCenter{
+
+.textCenter
+{
   text-align: center
 }
-#changenameSpan{
+
+#changenameSpan
+{
   font-style: oblique;
-  
 }
-#changename{
+
+#changename
+{
   color: #fff;
 }
+
 .mainButtons
 {
-    width:100%;
-    text-align: center;
+  width:100%;
+  text-align: center;
 }
+
 .mainButtonsInner
 {
-    display: inline-block;
+  display: inline-block;
 }
 
 .az
