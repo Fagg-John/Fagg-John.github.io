@@ -1,3 +1,4 @@
+// Variables Assigments
 var counter;
 var misses;
 var winCounter = 0;
@@ -7,20 +8,20 @@ var fWord;
 var timerFlag;
 var storeRecord = [];
 var setScore;
-function startGameTime(){
+function startGameTime()
+{
 	startTime = new Date();
 	setTimeout(timer, 1000);
-    document.getElementById("current_time").style.display = 'block'; 
-    //document.getElementById("startGameButton").disabled = true; 
-	
-    
-
+	document.getElementById("current_time").style.display = 'block'; 
 }
-function makeGame(){
+
+//Function to make the game
+function makeGame()
+{
 	stopTimer();
 	createAZ();
 	checkNameisSet();
-    setScore = 0;
+	setScore = 0;
 	var letters = [];
 	counter = 0;
 	misses = 0;
@@ -29,17 +30,17 @@ function makeGame(){
 	document.getElementById("counter").innerHTML = counter;
 	document.getElementById("misses").innerHTML = counter;
 	randWord = findWord();
-	//var randWord = words[Math.floor(Math.random() * words.length)];
 	fWord = randWord;
-	for(var i=0; i<randWord.length; i++){
-		
-		if(typeof randWord[i] !== 'undefined'){
-          letters.push(randWord[i]);
-          winCounter++;
-        }else{
-        	letters.push(i);
-        }
-   }
+	for(var i=0; i<randWord.length; i++)
+	{
+		if(typeof randWord[i] !== 'undefined')
+		{
+			letters.push(randWord[i]);
+			winCounter++;
+		}else{
+			letters.push(i);
+		}
+	}
 	var shuffled = letters;
 	var game = document.getElementById("game");
 	if(game.innerHTML !== ""){
