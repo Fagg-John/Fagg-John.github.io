@@ -179,49 +179,46 @@ function checkSpecialCharacter(letter)
 	return true;
 }
 
-function timer() {
-    // later record end time
-    var endTime = new Date();
-
-    // time difference in ms
-    var timeDiff = endTime - startTime;
-
-    // strip the miliseconds
-    timeDiff /= 1000;
-
-    // get seconds
-    var seconds = Math.round(timeDiff % 60);
-	if(seconds<10){
+function timer()
+{
+	//Record end time
+	var endTime = new Date();
+	// Time Difference in ms
+	var timeDiff = endTime - startTime;
+	// strip of the miliseconds
+	timeDiff /= 1000;
+	//Get seconds
+	var seconds = Math.round(timeDiff % 60);
+	if(seconds<10)
+	{
 		seconds = '0'+seconds;
 	}
-
-    // remove seconds from the date
-    timeDiff = Math.floor(timeDiff / 60);
-
-    // get minutes
-    var minutes = Math.round(timeDiff % 60);
-    if(minutes<10){
+	//Remove Seconds From the Date
+	timeDiff = Math.floor(timeDiff / 60);
+	//Get the Minutes
+	var minutes = Math.round(timeDiff % 60);
+	if(minutes<10)
+	{
 		minutes = '0'+minutes;
 	}
-    // remove minutes from the date
-    timeDiff = Math.floor(timeDiff / 60);
-
-    // get hours
-    var hours = Math.round(timeDiff % 24);
-    if(hours<10){
+	//Remove Minutes from the Date
+	timeDiff = Math.floor(timeDiff / 60);
+	//Get the Hours
+	var hours = Math.round(timeDiff % 24);
+	if(hours<10)
+	{
 		hours = '0'+hours;
 	}
-
-    // remove hours from the date
-    timeDiff = Math.floor(timeDiff / 24);
-
-    // the rest of timeDiff is number of days
-    var days = timeDiff;
-    var time =   hours + ":" + minutes + ":" + seconds;
-    document.getElementById("current_time").innerHTML = time;
-   
-    timerFlag = setTimeout(timer, 1000);
+	//Remove Hours from the Date
+	timeDiff = Math.floor(timeDiff / 24);
+	//Number of days
+	var days = timeDiff;
+	var time =   hours + ":" + minutes + ":" + seconds;
+	document.getElementById("current_time").innerHTML = time;
+	
+	timerFlag = setTimeout(timer, 1000);
 }
+
 function stopTimer() {
     clearTimeout(timerFlag);
 }
