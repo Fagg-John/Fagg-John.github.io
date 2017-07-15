@@ -8,6 +8,7 @@ var fWord;
 var timerFlag;
 var storeRecord = [];
 var setScore;
+
 function startGameTime()
 {
 	startTime = new Date();
@@ -315,7 +316,7 @@ function checkchrExist(c)
 	return false;
 }
 
-function setWiggle()
+function setJinggle()
 {
 	var inactiveAbcClass = setTimeout(function(){var active =  document.querySelectorAll('.abc');
         var i;
