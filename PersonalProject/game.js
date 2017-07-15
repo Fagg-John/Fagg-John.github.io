@@ -318,12 +318,13 @@ function checkchrExist(c)
 
 function setJinggle()
 {
-	var inactiveAbcClass = setTimeout(function(){var active =  document.querySelectorAll('.abc');
+	var inactiveAbcClass = setTimeout(function() {
+		var active =  document.querySelectorAll('.abc');
         var i;
         for (i = 0; i < active.length; i++)
 	{
-		active[i].classList.remove("abc");
-	}}, 1000);
+		active[i].classList.remove("abc"); 
+    	}}, 1000);
 }
 
 function turnOn()
