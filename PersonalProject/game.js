@@ -43,13 +43,15 @@ function makeGame()
 	}
 	var shuffled = letters;
 	var game = document.getElementById("game");
-	if(game.innerHTML !== ""){
-	setTimeout(function(){
-	game.classList.add("restack");
-	}, 500);
+	if(game.innerHTML !== "")
+	{
+		setTimeout(function()
+			   {
+				game.classList.add("restack");}, 500);
 	}
 	game.innerHTML = "";
-	for (var i = 0; i <= shuffled.length - 1; i++) {
+	for (var i = 0; i <= shuffled.length - 1; i++)
+	{
 		var div = document.createElement("div");
 		div.setAttribute("class", "card "+shuffled[i]);
 		var front = document.createElement("div");
@@ -64,9 +66,9 @@ function makeGame()
 		div.appendChild(back);
 		game.appendChild(div);
 	}
-	   setTimeout(function(){
-        game.classList.remove("restack");
-    }, 3000);
+	setTimeout(function()
+		   {
+		game.classList.remove("restack");}, 3000);
    setTimeout(function(){
         game.classList.remove("stacked");
     }, 500);
